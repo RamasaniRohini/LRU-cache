@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LRU Cache Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>LRU Cache Simulator</h1>
+
+        <!-- Cache Initialization -->
+        <div class="input-section">
+            <input type="number" id="cacheSize" placeholder="Enter Cache Size" min="1">
+            <button class="btn initialize" onclick="initializeCache()">Initialize</button>
+        </div>
+
+        <!-- Cache Operations -->
+        <div class="input-section">
+            <input type="number" id="keyInput" placeholder="Key">
+            <input type="number" id="valueInput" placeholder="Value">
+            <button class="btn put" onclick="put()">Put</button>
+            <button class="btn get" onclick="get()">Get</button>
+        </div>
+
+        <!-- LRU and MRU Indicators -->
+        <div class="status-section">
+            <p><strong>Most Recently Used (MRU):</strong> <span id="mru">-</span></p>
+            <p><strong>Least Recently Used (LRU):</strong> <span id="lru">-</span></p>
+        </div>
+
+        <!-- Cache Display -->
+        <div class="cache-display">
+            <h2>Cache Status</h2>
+            <div id="cacheContainer"></div>
+        </div>
+
+        <!-- Message Display -->
+        <p id="message"></p>
+    </div>
+
+    <script src="lru.js"></script>
+</body>
+</html>
